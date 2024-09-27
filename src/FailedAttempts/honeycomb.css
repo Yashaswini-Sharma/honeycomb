@@ -1,0 +1,59 @@
+/* src/components/Honeycomb.css */
+.honeycomb {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    /* Adjust based on your needs */
+}
+
+.honeycomb-cell {
+    width: 100px;
+    height: 86.6px;
+    /* height = width * sqrt(3) / 2 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    position: relative;
+    clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%,
+            75% 93.3%, 25% 93.3%, 0% 50%);
+}
+
+/* Shifts every second column (odd child) to the right */
+.honeycomb-cell:nth-child(odd) {
+    margin-left: 50px;
+    /* Adjust to fit the stagger */
+}
+
+/* Adjust margin for rows to ensure alignment */
+.honeycomb-cell:nth-child(odd) {
+    /* height / 2 */
+}
+
+.honeycomb-cell:nth-child(even) {
+    margin-top: 0;
+    /* No extra margin for even rows */
+}
+
+.easy {
+    background-color: #65B415;
+    /* Green */
+}
+
+.medium {
+    background-color: #FFEB3B;
+    /* Yellow */
+}
+
+.hard {
+    background-color: #B40041;
+    /* Red */
+}
+
+.difficulty {
+    position: relative;
+    z-index: 1;
+}
